@@ -68,7 +68,7 @@ header{
 
   .menu a {
     display: block;
-    padding: 3px 20px;
+    padding: 3px 16px;
     transition: background-color 1s, color, 0.5s;
   }
 
