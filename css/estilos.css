@@ -1,0 +1,351 @@
+/* soft reset do css */
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+  body {
+    font-family:'Roboto Mono', cursive;
+    background-size: auto 100vh;
+    color: white;
+    font-size: 10px;
+    height: 100vh;
+  }
+
+/* se a telar tiver pelo menos 400px, carrega as fontes*/
+@media (min-width:300px){
+  body{
+  font-size: 10px;
+  }
+}
+/* breakpoint */
+@media (min-width:600px){
+  body{
+    font-size: 14px;
+  }
+}
+
+@media (min-width:1000px){
+  body{
+  font-size: 18px;
+  }
+}
+
+header{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+ .menu {
+     background-color: black; 
+     position: fixed;
+     width: 100vw;
+     top: 0;
+     font-size: 16px;
+     z-index: 1;
+     overflow: hidden;
+ }
+
+  .menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  .menu li   {
+    list-style: none;
+  }
+  
+  .menu ul li {
+    width: 150px;
+    float: left;
+  }
+
+  .menu a {
+    display: block;
+    padding: 3px 20px;
+    transition: background-color 1s, color, 0.5s;
+  }
+
+  .menu a:active,
+  .menu a:hover {
+    background-color: rgb(231, 44, 138);
+    color: white;
+  }
+  
+  a
+  {
+    color: white;
+    text-decoration:none;
+  }
+  
+  .site-subtitle {
+    transform: scale(0.5) translateY(50vh);
+    opacity: 0;
+    animation: linear 0.6s animacaoTitulo forwards;
+  }
+
+@keyframes animacaoTitulo {
+  0%{
+    transform: scale(0.8); 
+    opacity: 0.5;
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+  .site-title,
+  .site-subtitle
+  {
+    text-align: center;
+  }
+ 
+  .site-title {
+    font-size: 2.5em;
+    font-family: 'Major Mono Display', monospace;
+    color: deeppink;
+  }
+
+  .site-subtitle  {
+   /* font-style: italic;*/
+    font-family:'Amatic SC', cursive;
+    color: grey;
+    line-height: 1.8em;
+  }
+
+  .sobre,
+  .contato, 
+  .portfolio{
+    padding: 2em;
+    min-height: 97vh;
+    color: black;
+  }
+
+
+  @media (min-width: 1200px) {
+    .container  { 
+     max-width: 1200px;
+     margin-left: auto;
+     margin-right: auto;
+     text-align: justify;
+    }
+  }
+
+  .sobre{
+    height: auto;
+    line-height: 2em;
+    color: black;
+    padding: 3em 1em 1em 1em;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  } 
+
+  .grid-sobre {
+    display: grid;
+    grid-template-columns: 300px 750px;
+  }
+
+  .titulo-sobre {
+    text-align: center;
+    margin: 0 auto;
+    padding: 2em;
+  }
+
+  .titulo-sobre h3 {
+    padding-bottom: 0.1em;
+    border-bottom: 3px solid deeppink;
+    font: 1.2em;
+  }
+
+  .texto-sobre {
+    padding: 2em;
+  }
+
+  .texto-sobre h4 {
+    margin-bottom: 0.1em;
+    color: black;
+    font-weight: 400;
+    
+  }
+.texto-sobre h5{
+  margin-bottom: 2em;
+  font-weight: 400;
+}
+  .sobre h2,
+  .contato h2,
+  .portfolio h2 {
+    font-family:'Amatic SC', cursive;
+    font-size: 2.5em;
+    color: black;
+    margin-bottom: 1.5em;
+    
+  }      
+
+ /*
+  .sobre .avatar {
+    float: left;
+    margin-right: 2em;
+    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%); 
+  }
+
+  @media (min-width:300px){
+    .sobre .avatar img {
+    max-width: 120px;
+    max-height: 120px;
+    width: auto;
+    height: auto;
+    }
+  }
+  @media (min-width:560px){
+    .sobre .avatar img {
+      max-width: 200px;
+      max-height: 200px;
+      width: auto;
+      height: auto;
+    }
+  }
+ @media (min-width:880px){
+    .sobre .avatar img {
+      max-width: 250px;
+      max-height: 250px;
+      width: auto;
+      height: auto;
+    }
+  }
+*/
+  
+  @media (max-width: 1028px){
+    .grid-sobre{
+    grid-template-columns: repeat(2, auto);
+    }
+  }
+
+  @media (max-width:605px){ 
+    .grid-sobre {
+    grid-template-columns: repeat(1,350px);
+    font-size: 1.4em;
+    }
+  }
+
+  .portfolio .grid {
+    display: grid;
+    gap: 2em;
+  }
+  
+  @media (min-width: 560px) {
+    .portfolio .grid {
+      grid-template-columns: 240px 240px;
+    }
+  }
+  
+  @media (min-width: 880px) {
+    .portfolio .grid {
+      grid-template-columns: repeat(3, 260px);
+      align-content: center;
+      justify-content: center;
+     /* height: calc(100vh - 8em - 48px); */
+    }
+  }
+  
+  .flip-card {
+    height: 180px;
+    perspective: 1000px;
+  }
+  
+  .flip-card:hover .card {
+    transform: rotateY(180deg);
+  }
+  
+  .card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 2s;
+  }
+  
+  .card-front, 
+  .card-back {
+    backface-visibility: hidden;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  
+  .card-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, .7);
+    height: 180px;
+    width: 100%;
+    transform: rotateY(180deg);
+  }
+  
+  .portfolio figure {
+    text-align: center;
+    background-color: white;
+  }
+  
+  .img-portfolio {
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 500ms;
+  }
+
+.contato .icons {
+  text-align: center;
+  align-content: center;
+}
+
+.contato a {
+  color: deeppink;
+  font-size: 4em;
+}
+
+.contato a:active,
+.contato a:hover {
+  text-decoration: none;
+  text-shadow: 0px 0px 10px;
+}
+
+@media (min-width:200px){
+  .contato .icons {
+  font-size: 0.8em;
+  }
+}
+ @media (min-width:560px){
+  .contato .icons {
+    font-size: 1em; 
+  }
+}
+ @media (min-width:880px){
+  .contato .icons {
+    font-size: 1.1em;
+  }
+}
+
+.footer p{
+  font-size: 0.7em;
+  color: grey;
+  margin-bottom: 1.4em;
+  text-align: center;
+  justify-content: center;
+  position: unset;
+}
+.footer b {
+text-decoration: underline;
+color: black;
+}
+.footer b:hover {
+  text-decoration: underline;
+  text-shadow: 5px 5px 5px deeppink;
+}
