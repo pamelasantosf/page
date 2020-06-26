@@ -76,8 +76,7 @@ header{
   .menu a:hover {
     background-color: rgb(231, 44, 138);
     color: white;
-    height: 6.5vh;
-  }
+}
   
   a
   {
