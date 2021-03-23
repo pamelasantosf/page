@@ -278,6 +278,7 @@ header{
     top: 0;
     width: 100%;
     text-align: center;
+    color: black;
   }
   
   .card-back {
@@ -295,6 +296,7 @@ header{
   .portfolio figure {
     text-align: center;
     background-color: white;
+    color: black
   }
   
   .img-portfolio {
