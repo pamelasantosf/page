@@ -309,6 +309,10 @@ header{
     transition: transform 500ms;
   }
 
+.portfolio a {
+  color: black;
+}
+
 .contato .icons {
   text-align: center;
   align-content: center;
