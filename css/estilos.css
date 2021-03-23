@@ -56,11 +56,12 @@ header{
     display: flex;
     justify-content: space-around;
     text-align: center;
-    color: white
+    color: white;
   }
 
   .menu li   {
     list-style: none;
+    color: white;
   }
   
   .menu ul li {
