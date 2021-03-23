@@ -287,6 +287,7 @@ header{
     background-color: rgba(255, 255, 255, .7);
     height: 180px;
     width: 100%;
+    color: black;
     text-align: center;
     transform: rotateY(180deg);
   }
